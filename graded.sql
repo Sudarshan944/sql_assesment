@@ -59,7 +59,7 @@ SELECT * FROM CONTACT;
 SELECT * FROM CONTACT WHERE ACTIVE_FLAG = 1;
 
 -- Deactivate contacts who are opted out
-DELETE FROM CONTACT WHERE OPT_OUT="1";
+UPDATE CONTACT SET ACTIVE_FLAG = 0 WHERE OPT_OUT = 1;
 
 -- Delete all the contacts who have the company name as ‘ABC’
 DELETE FROM CONTACT WHERE COMPANY="abc";
